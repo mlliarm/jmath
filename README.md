@@ -76,8 +76,8 @@ There is also a symbol for the [indeterminate form](https://code.jsoftware.com/w
 |NaN error		NB. Result: NaN error, should have been _.
 |   _    -_
 
-_/_			NB. Infinity/Infinity
-|domain error	NB. Result: domain error, should have been _.
+_%_			NB. Infinity/Infinity
+|NaN error		NB. Result: NaN error, should have been _.
 |   _    /_
 
    0^0			NB. 0^0
