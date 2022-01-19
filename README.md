@@ -76,62 +76,62 @@ There is also a symbol for the [indeterminate form](https://code.jsoftware.com/w
 |NaN error		NB. Result: NaN error, should have been _.
 |   _    -_
 
-_/_				NB. Infinity/Infinity
+_/_			NB. Infinity/Infinity
 |domain error	NB. Result: domain error, should have been _.
 |   _    /_
 
    0^0			NB. 0^0
-1 				NB. This should have been _.
+1 			NB. This should have been _.
 
    0%0			NB. 0/0
-0				NB. This should have been _.
+0			NB. This should have been _.
    
-	_^_			NB. Infinity^Infinity
-_				NB. Result: Infinity, should have been _.
+	_^_		NB. Infinity^Infinity
+_			NB. Result: Infinity, should have been _.
 ```
 
 So we see that currently there are some issues with `j903` regarding infinities, or more specifically, the indeterminate form doesn't arise in places where it did in mathematics. But not all is bad:
 
 ```j
-	1-_			NB. 1 - Infinity
-__				NB. Result: -Infinity, correct.
+	1-_		NB. 1 - Infinity
+__			NB. Result: -Infinity, correct.
 
 	1+_ 		NB. 1 + Infinity
-_ 				NB. Result: Infinity, correct.
+_ 			NB. Result: Infinity, correct.
 
 	1%0 		NB. 1/0
-_ 				NB. Result: Infinity, correct.
+_ 			NB. Result: Infinity, correct.
 
 	1%_ 		NB. 1/Infinity
-0 				NB. Result: 0, correct.
+0 			NB. Result: 0, correct.
 
 	_+_ 		NB. Infinity + Infinity
-_ 				NB. Result: Infinity, correct.
+_ 			NB. Result: Infinity, correct.
 
 	_-__ 		NB. Infinity - (-Infinity)
-_ 				NB. Infinity, correct.
+_ 			NB. Infinity, correct.
 
 	_*_ 		NB. Infinity*Infinity
-_ 				NB. Infinity, correct (I guess).
+_ 			NB. Infinity, correct (I guess).
 ```
 
 Reading further the [article](https://code.jsoftware.com/wiki/Vocabulary/underdot) shared earlier on indeterminater forms, we understand that the correct J code should use the underdot character only as a flag for badly formed data in our dataset. An example taken from that page due to [Ian Clark](https://code.jsoftware.com/wiki/User:Ian_Clark) follows:
 
 ```j
-z=: '.2 0.2 2.45 3E56 3F56 _1 _0 77'
+	z=: '.2 0.2 2.45 3E56 3F56 _1 _0 77'
 
-NB. (".) accepts non-J-numerals like '.2' and '3E56' but not '3F56' ...
-   ".z
+	NB. (".) accepts non-J-numerals like '.2' and '3E56' but not '3F56' ...
+   	".z
 |ill-formed number
 |       ".z
 
-   _. ".z NB. Replacing ill formed numbers with indeterminate form _.
+   	_. ".z    NB. Replacing ill formed numbers with indeterminate form _.
 0.2 0.2 2.45 3e56 _. _1 0 77
 
-   0 ".z     NB. replace bad-numerals by ZERO
+   	0 ".z     NB. replace bad-numerals by ZERO
 0.2 0.2 2.45 3e56 0 _1 0 77
 
-   _ ".z     NB. replace bad-numerals by INFINITY
+   	_ ".z     NB. replace bad-numerals by INFINITY
 0.2 0.2 2.45 3e56 _ _1 0 77
 ```
 
