@@ -81,38 +81,38 @@ _/_				NB. Infinity/Infinity
 |   _    /_
 
    0^0			NB. 0^0
-1 				NB. This should have been _.
+1 			NB. This should have been _.
 
    0%0			NB. 0/0
-0				NB. This should have been _.
+0			NB. This should have been _.
    
-	_^_			NB. Infinity^Infinity
-_				NB. Result: Infinity, should have been _.
+	_^_		NB. Infinity^Infinity
+_			NB. Result: Infinity, should have been _.
 ```
 
 So we see that currently there are some issues with `j903` regarding infinities. But not all is bad:
 
 ```j
-	1-_			NB. 1 - Infinity
-__				NB. Result: -Infinity, correct.
+	1-_		NB. 1 - Infinity
+__			NB. Result: -Infinity, correct.
 
 	1+_ 		NB. 1 + Infinity
-_ 				NB. Result: Infinity, correct.
+_ 			NB. Result: Infinity, correct.
 
 	1%0 		NB. 1/0
-_ 				NB. Result: Infinity, correct.
+_ 			NB. Result: Infinity, correct.
 
 	1%_ 		NB. 1/Infinity
-0 				NB. Result: 0, correct.
+0 			NB. Result: 0, correct.
 
 	_+_ 		NB. Infinity + Infinity
-_ 				NB. Result: Infinity, correct.
+_ 			NB. Result: Infinity, correct.
 
 	_-__ 		NB. Infinity - (-Infinity)
-_ 				NB. Infinity, correct.
+_ 			NB. Infinity, correct.
 
 	_*_ 		NB. Infinity*Infinity
-_ 				NB. Infinity, correct (I guess).
+_ 			NB. Infinity, correct (I guess).
 ```
 
 An interesting article that discusses various implementations and uses of infinities with APL is [this one](https://www.jsoftware.com/papers/eem/infinity.htm).
