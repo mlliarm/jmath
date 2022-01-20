@@ -47,6 +47,36 @@ Let's assume real numbers a, b and n an odd natural number (n > 0 and ).What's t
 
 (I wonder if J supports parametric plots?)
 
+#### a + j\*a
+
+ If `a = b` in the complex number `z = a + j*b`, then one can easily prove that the modulus of this complex number corresponds to square roots with even number under the root:
+
+```j
+|aja = n^%2 
+
+(a*a + a*a)^%2 = n^%2
+
+2*a*a = (+/-) n 	NB. and since a must be an integer, we keep only the positive value in the RHS
+
+a = (+/-) (n/2)^%2
+
+NB. Now a above has integer values only if n is even, that is n = 2*k, for k in {1, 2, 3, ...}
+
+a = (+/-) k^%2 	NB. QED.
+```
+
+#### a + j\*b, n square
+
+If n is a square then things are simple too, since this problem is being reduced to the problem of the [Pythagorean triples](https://en.wikipedia.org/wiki/Pythagorean_triple), where there [are many](https://en.wikipedia.org/wiki/Formulas_for_generating_Pythagorean_triples) known algorithms for producing them.
+
+#### a + j\*b, n odd
+
+TBD.
+
+#### a + j\*b, n prime
+
+TBD.
+
 ## 2. An infinite sum of square roots
 
 ## 3. Exploring infinity
