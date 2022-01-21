@@ -3,7 +3,9 @@ Answering to mathematical questions using J.
 
 A series of mini-projects.
 
-## 01. [Exploring infinity](articles/01_Exploring_infinity.md)
+## 01. Exploring infinity
+- [Article](articles/01_Exploring_infinity.md).
+- [Code](code/01_Exploring_infinity.ijs).
 
 ## 02. An infinite sum of square roots
 
