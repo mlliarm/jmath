@@ -5,12 +5,11 @@ A series of mini-projects.
 
 ## 01. [Exploring infinity](articles/01_Exploring_infinity.md)
 
-## 02. [An infinite sum of square roots](articles/TBD.md)
+## 02. An infinite sum of square roots
 
-TBD.
+## 03. Complex primes
 
-## 03. [Complex primes](articles/TBD.md)
-
-TBD.
+---
+[TBD](articles/TBD.md): 02, 03.
 
 
