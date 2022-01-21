@@ -1,5 +1,5 @@
 # jmath
-Answering to mathematical questions using J.
+Answering to mathematical questions using [J](https://www.jsoftware.com).
 
 A series of mini-projects.
 
