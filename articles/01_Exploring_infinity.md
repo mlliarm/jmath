@@ -103,7 +103,7 @@ NB. replace bad-numerals by INFINITY
 ```
 
 The interested reader can further their knowledge on infinities and indeterminate forms reading the following articles:
-- [Roger Hui, 2008](https://code.jsoftware.com/wiki/Essays/Indeterminate): an essay.
+- [Roger Hui, 2008](https://code.jsoftware.com/wiki/Essays/Indeterminate): an essay on the indeterminate forms.
 - [E.E. McDonnell, Jeffrey O. Shallit](https://www.jsoftware.com/papers/eem/infinity.htm), APL 80 Conference Proceedings, 1980 6 24.
 - [R. W.W. Taylor, 1982](https://dl.acm.org/doi/10.1145/390006.802264), Indexing infinite arrays: Non-finite mathematics in APL.
 - [Harvey Davies, 1995](https://dl.acm.org/doi/10.1145/206913.206953), Infinity arithmetic, comparisons and J.
