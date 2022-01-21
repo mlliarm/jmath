@@ -1,4 +1,4 @@
-# 03. Exploring infinity
+# 01. Exploring infinity
 
 J supports infinities, as entities.
 
