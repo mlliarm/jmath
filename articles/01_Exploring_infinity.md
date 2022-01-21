@@ -82,12 +82,14 @@ Reading further the [article](https://code.jsoftware.com/wiki/Vocabulary/underdo
 ```j
 NB. Creating a string of an array that contains bad data inside.
    z=: '.2 0.2 2.45 3E56 3F56 _1 _0 77'
-|ill-formed number
-|       ".z
+z=: '.2 0.2 2.45 3E56 3F56 _1 _0 77'
 
 NB. (".) accepts non-J-numerals like '.2' and '3E56' but not '3F56'.
    ".z
-0.2 0.2 2.45 3e56 _. _1 0 77
+|ill-formed number
+|   .2 0.2 2.45 3E56 3F56 _1 _0 77
+|    ^
+|       ".z
 
 NB. Replacing ill formed numbers with indeterminate form _.
    _. ".z
