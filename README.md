@@ -10,7 +10,7 @@ A series of mini-projects.
 The other day I was playing with J, and noticed that
 
 ```j
-	|1j1
+   |1j1
 1.41421
 ```
 
@@ -25,7 +25,7 @@ Of course, it's the square root of 2, since the modulus of a complex number `z =
 And in our case we had `a = b = 1`, and so:
 
 ```j
-	|z = (1*1 + 1*1)^%2
+   |z = (1*1 + 1*1)^%2
 1.41421
 ```
 
@@ -56,13 +56,13 @@ Let's assume real numbers a, b and n an odd natural number (n > 0 and ).What's t
 
 (a*a + a*a)^%2 = n^%2
 
-2*a*a = (+/-) n 	NB. and since a must be an integer, we keep only the positive value in the RHS
+2*a*a = (+/-) n      NB. and since a must be an integer, we keep only the positive value in the RHS
 
 a = (+/-) (n/2)^%2
 
 NB. Now a above has integer values only if n is even, that is n = 2*k, for k in {1, 2, 3, ...}
 
-a = (+/-) k^%2 	NB. QED.
+a = (+/-) k^%2       NB. QED.
 ```
 
 #### a + j\*b, n square
@@ -86,82 +86,93 @@ J supports infinities, as entities.
 For example, if we divide one with zero we get positive infinity:
 
 ```j
-	1%0
+   1%0
 _
 ```
 
 And if we divide minus one with zero we get negative infinity:
 
 ```j
-	-1%0
+   -1%0
 __
 ```
 
 So, positive infinity has the symbol underscore and the negative infinity the symbol double underscore.
 
-There is also a symbol for the [indeterminate form](https://code.jsoftware.com/wiki/Vocabulary/underdot), the underscore dot character. If we recall from high school, the indetermimnate form is a result of operations such as: infinity - infinity, infinity/infinity, 0^0, 0/0, infinity^infinity. Let's try those out in J:
+There is also a symbol for the [indeterminate form](https://code.jsoftware.com/wiki/Vocabulary/underdot), the underscore dot character. If we recall from high school, the indetermimnate form is a result of operations such as: infinity - infinity, infinity/infinity, 0^0, 0/0, infinity^infinity (taken from [Wolfram Mathworld](https://mathworld.wolfram.com/Indeterminate.html)). Let's try those out in J:
 
 ```j
- _ - _			NB. Infinity - Infinity
-|NaN error		NB. Result: NaN error, should have been _.
+   0%0             NB. 0/0
+0                  NB. Result: 0, should have been _.
+
+   0*_             NB. 0*Infinity
+0                  NB. Result: 0, should have been _.
+
+   _%_             NB. Infinity/Infinity
+|NaN error         NB. Result: NaN error, should have been _.
+|   _    %_
+
+   _-_             NB. Infinity - Infinity
+|NaN error         NB. Result: NaN error, should have been _.
 |   _    -_
 
-_%_			NB. Infinity/Infinity
-|NaN error	NB. Result: domain error, should have been _.
-|   _    /_
+   0^0             NB. 0^0
+1                  NB. Result: 1, should have been _.
 
-   0^0			NB. 0^0
-1 			NB. This should have been _.
+   _^0             NB. Infinity^0.
+1                  NB. Result: 1, should have been _.
 
-   0%0			NB. 0/0
-0			NB. This should have been _.
-   
-	_^_		NB. Infinity^Infinity
-_			NB. Result: Infinity, should have been _.
+   1^_             NB. 1^Infinity
+1                  NB. Result: 1, should have been _.
+
 ```
 
 So we see that currently there are some issues with `j903` regarding infinities, or more specifically, the indeterminate form doesn't arise in places where it did in mathematics. But not all is bad:
 
 ```j
-	1-_		NB. 1 - Infinity
-__			NB. Result: -Infinity, correct.
+   1-_              NB. 1 - Infinity
+__                  NB. Result: -Infinity, correct.
 
-	1+_ 		NB. 1 + Infinity
-_ 			NB. Result: Infinity, correct.
+   1+_              NB. 1 + Infinity
+_                   NB. Result: Infinity, correct.
 
-	1%0 		NB. 1/0
-_ 			NB. Result: Infinity, correct.
+   1%0              NB. 1/0
+_                   NB. Result: Infinity, correct.
 
-	1%_ 		NB. 1/Infinity
-0 			NB. Result: 0, correct.
+   -1%0             NB. -1/0
+__                  NB. Result: -Infinity, correct.
 
-	_+_ 		NB. Infinity + Infinity
-_ 			NB. Result: Infinity, correct.
 
-	_-__ 		NB. Infinity - (-Infinity)
-_ 			NB. Infinity, correct.
+   1%_              NB. 1/Infinity
+0                   NB. Result: 0, correct.
 
-	_*_ 		NB. Infinity*Infinity
-_ 			NB. Infinity, correct (I guess).
+   _+_              NB. Infinity + Infinity
+_                   NB. Result: Infinity, correct.
+
+   _-__             NB. Infinity - (-Infinity)
+_                   NB. Infinity, correct.
+
+   _*_              NB. Infinity*Infinity
+_                   NB. Infinity, correct (I guess).
 ```
 
 Reading further the [article](https://code.jsoftware.com/wiki/Vocabulary/underdot) shared earlier on indeterminater forms, we understand that the correct J code should use the underdot character only as a flag for badly formed data in our dataset. An example taken from that page due to [Ian Clark](https://code.jsoftware.com/wiki/User:Ian_Clark) follows:
 
 ```j
-	z=: '.2 0.2 2.45 3E56 3F56 _1 _0 77'
+   z=: '.2 0.2 2.45 3E56 3F56 _1 _0 77'
 
-	NB. (".) accepts non-J-numerals like '.2' and '3E56' but not '3F56' ...
-   	".z
+             NB. (".) accepts non-J-numerals like '.2' and '3E56' but not '3F56' ...
+   ".z
 |ill-formed number
 |       ".z
 
-   	_. ".z    NB. Replacing ill formed numbers with indeterminate form _.
+   _. ".z    NB. Replacing ill formed numbers with indeterminate form _.
 0.2 0.2 2.45 3e56 _. _1 0 77
 
-   	0 ".z     NB. replace bad-numerals by ZERO
+   0 ".z     NB. replace bad-numerals by ZERO
 0.2 0.2 2.45 3e56 0 _1 0 77
 
-   	_ ".z     NB. replace bad-numerals by INFINITY
+   _ ".z     NB. replace bad-numerals by INFINITY
 0.2 0.2 2.45 3e56 _ _1 0 77
 ```
 
