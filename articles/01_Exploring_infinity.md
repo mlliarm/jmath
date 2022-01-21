@@ -46,7 +46,9 @@ There is also a symbol for the [indeterminate form](https://code.jsoftware.com/w
 
 ```
 
-So we see that currently there are some issues with `j903` regarding infinities, or more specifically, the indeterminate form doesn't arise in places where it did in mathematics. But not all is bad:
+So we see that currently there are some issues with `j903` regarding infinities, or more specifically, the indeterminate form doesn't arise in places where it did in mathematics. It seems that this was designed like that on purpose (see [this lemma](https://www.jsoftware.com/help/dictionary/d031.htm) from the jdictionary), so it's working as expected.
+
+That being said, we can still play around with infinities successfully, with results that match our mathematical expectations:
 
 ```j
    1-_              NB. 1 - Infinity
