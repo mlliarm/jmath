@@ -132,7 +132,7 @@ If we dissect a bit more the above, it pretty much is an expression created by t
 0.5 _ 0
 
    % 2 0 _ _      NB. Calculate 1%2 1%0 1%_ 1%_
-0.5 _ 0
+0.5 _ 0 0
 ```
 
 If we use the reduce verb together just before the division verb:
