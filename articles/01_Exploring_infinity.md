@@ -148,7 +148,7 @@ _
 
 Now, when we have expressions that return errors related to bad calculations as the above, we can do two things:
 
-1. The old style
+### The old style
 
 Replace the badly formatted result with some other number, like done in the previous example, with the indeterminate form `_.`, with zero `0`, or with infinity `_`. Let's do that.
 
@@ -178,7 +178,7 @@ _
 which makes sense, because this is what happens: `2%0%_%_ --> 2%0%0 --> 2%(0%0) --> 2%0 --> _`.
 
 
-2. The new style
+### The new style
 
 The new style uses the [coco](https://code.jsoftware.com/wiki/Vocabulary/coco) verb `::`. Let's see a simple example first:
 
