@@ -199,6 +199,7 @@ We now understand that the suggestion u/Godspiral gave, combined both the old an
 
 
 ## Thanks
+- To [bobTerryo](https://www.youtube.com/user/bobtherriault) and [Palaiologos](https://palaiologos.rocks/) for having the time to take a look at the first version of the article.
 - To the users of [r/apljk](https://www.reddit.com/r/apljk/) that bothered to read my article and post a comment:
    - u/hjs2001 for noticing that `-1` should be replaced by `_1` to match the correct J notation of minus one.
    - u/Godspiral for giving the above suggestion on how to get `_.` as a result.
@@ -213,4 +214,4 @@ The interested reader can further their knowledge on infinities and indeterminat
 2. [E.E. McDonnell, Jeffrey O. Shallit](https://www.jsoftware.com/papers/eem/infinity.htm), APL 80 Conference Proceedings, 1980 6 24.
 3. [R. W.W. Taylor](https://dl.acm.org/doi/10.1145/390006.802264), Indexing infinite arrays: Non-finite mathematics in APL, 1982.
 4. [Harvey Davies](https://dl.acm.org/doi/10.1145/206913.206953), Infinity arithmetic, comparisons and J, 1995.
-5. [Eugene McDonnell](https://www.jsoftware.com/papers/eem/0div0.htm),Zero divided by zero, APL '76 22 September 1976.
+5. [Eugene McDonnell](https://www.jsoftware.com/papers/eem/0div0.htm), Zero divided by zero, APL '76 22 September 1976.
