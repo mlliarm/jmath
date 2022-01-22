@@ -141,7 +141,7 @@ If we use the reduce verb together just before the division verb:
    % / 2 0 _      NB. Is the same as 2%0%_ which is 2%(0%_) so it gives in math notation 2/(0/Inf.) = 2/0 = Inf.
 _
 
-   % / 2 0 _ _    NB. Is the same as 2%0%_%_ which is 2%(0%(_%_)) so it gives a NaN error, because that's what _%_ 
+   % / 2 0 _ _    NB. Is the same as 2%0%_%_ which is 2%(0%(_%_)) so it gives a NaN error, because that's what _%_ gives 
 |NaN error
 |       %/2 0 _ _
 ```
