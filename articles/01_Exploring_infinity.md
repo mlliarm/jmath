@@ -215,3 +215,6 @@ The interested reader can further their knowledge on infinities and indeterminat
 3. [R. W.W. Taylor](https://dl.acm.org/doi/10.1145/390006.802264), Indexing infinite arrays: Non-finite mathematics in APL, 1982.
 4. [Harvey Davies](https://dl.acm.org/doi/10.1145/206913.206953), Infinity arithmetic, comparisons and J, 1995.
 5. [Eugene McDonnell](https://www.jsoftware.com/papers/eem/0div0.htm), Zero divided by zero, APL '76 22 September 1976.
+
+---
+<a class="btn btn-rss" href="/feed.xml" target="_blank">RSS</a>
