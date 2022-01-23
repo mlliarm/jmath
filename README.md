@@ -1,3 +1,5 @@
+<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="/feed.xml">
+
 # jmath
 Answering to mathematical questions using [J](https://www.jsoftware.com).
 
