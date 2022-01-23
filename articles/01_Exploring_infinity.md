@@ -1,3 +1,9 @@
+<head>
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml">
+</head>
+
+---
+
 # 01. Exploring infinity
 
 ## Introduction
