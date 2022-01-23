@@ -12,9 +12,6 @@ A series of mini-projects.
 ## 03. Complex primes
 
 ---
-[TBD](articles/TBD.md): 02, 03.
-
----
 <a class="btn btn-rss" href="/feed.xml" target="_blank">RSS</a>
 
 
