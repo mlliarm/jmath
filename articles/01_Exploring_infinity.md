@@ -201,7 +201,7 @@ We now understand that the suggestion u/Godspiral gave, combined both the old an
 ## Thanks
 - To [bobTerryo](https://www.youtube.com/user/bobtherriault) and [Palaiologos](https://palaiologos.rocks/) for having the time to take a look at the first version of the article.
 - To the users of [r/apljk](https://www.reddit.com/r/apljk/) that bothered to read my article and post a comment:
-   - u/hjs2001 for noticing that `-1` should be replaced by `_1` to match the correct J notation of minus one.
+   - u/hjs2001 for noticing that `-1` should be replaced by `_1` because `-1%0` is `-(1%0)`, whereas what I want is `(-1)%0` and that is expressed as `_1%0`. So the result might be the same this time, but the expression I should use is the second one, because that one codifies exactly what I want to calculate.
    - u/Godspiral for giving the above suggestion on how to get `_.` as a result.
    - u/moonchilled for mentioning that `"_` is redundant in modern versions of J, due to `::` ([coco](https://code.jsoftware.com/wiki/Vocabulary/coco)), and for sharing the reading `5.` below where Eugene defended `0%0` as well as for sharing their viewpoint/best-practices-advice:
    >  Use of `_.` is discouraged; its primary use is interaction with existing arbitrarily-formed ieee-754. The language does not deal consistently with it. I think a better approach would be to maintain a mask identifying indeterminate values, which also allows you to say more about what went wrong.
