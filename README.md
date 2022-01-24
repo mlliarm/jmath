@@ -1,4 +1,4 @@
-<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml">
+<!-- <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml"> -->
 
 # jmath
 Answering to mathematical questions using [J](https://www.jsoftware.com).
@@ -13,7 +13,7 @@ A series of mini-projects.
 
 ## 03. Complex primes
 
----
-<a class="btn btn-rss" href="/feed.xml" target="_blank">RSS</a>
+<!-- ---
+<a class="btn btn-rss" href="/feed.xml" target="_blank">RSS</a> -->
 
 

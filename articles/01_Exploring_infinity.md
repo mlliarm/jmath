@@ -1,8 +1,8 @@
-<head>
+<!-- <head>
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml">
 </head>
 
----
+--- -->
 
 # 01. Exploring infinity
 
@@ -222,5 +222,5 @@ The interested reader can further their knowledge on infinities and indeterminat
 4. [Harvey Davies](https://dl.acm.org/doi/10.1145/206913.206953), Infinity arithmetic, comparisons and J, 1995.
 5. [Eugene McDonnell](https://www.jsoftware.com/papers/eem/0div0.htm), Zero divided by zero, APL '76 22 September 1976.
 
----
-<a class="btn btn-rss" href="/feed.xml" target="_blank">RSS</a>
+<!-- ---
+<a class="btn btn-rss" href="/feed.xml" target="_blank">RSS</a> -->
