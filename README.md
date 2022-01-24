@@ -13,7 +13,7 @@ A series of mini-projects.
 
 ## 03. Complex primes
 
-<!-- ---
-<a class="btn btn-rss" href="/feed.xml" target="_blank">RSS</a> -->
+---
+<!-- <a class="btn btn-rss" href="/feed.xml" target="_blank">RSS</a> -->
 
 
