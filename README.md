@@ -1,7 +1,7 @@
 <!-- <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml"> -->
 
 # jmath
-Answering to mathematical questions using [J](https://www.jsoftware.com).
+Exploring mathematics with [J](https://www.jsoftware.com).
 
 A series of mini-projects.
 
